@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+    
+    <persistence-unit name="shortLinkPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        <class>entity.LinkInfo</class>
+
+        <properties>
+
+            <!-- 
+            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/APP;create=true" />
+             -->
+            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby:APP;create=true"/>
+            <property name="javax.persistence.jdbc.user" value="APP"/>
+
+            <property name="eclipselink.logging.level" value="OFF" />
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+
+        </properties>
+
+    </persistence-unit>
+</persistence>
+

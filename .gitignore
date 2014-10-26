@@ -1,0 +1,23 @@
+#################
+## Eclipse
+#################
+
+.metadata/
+target/
+Script/
+.project
+.metadata
+local.properties
+.classpath
+.settings/
+.loadpath
+.dbeaver-data-sources.xml
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
